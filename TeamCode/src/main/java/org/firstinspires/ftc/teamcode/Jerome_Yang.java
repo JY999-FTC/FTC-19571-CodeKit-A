@@ -18,8 +18,17 @@ import com.qualcomm.robotcore.hardware.CRServo;
 // @TeleOp means this will show up as teleop
 @TeleOp
 
-// public class needs to be same name as the document. extend LinearOpMode because it inherits its code
+// public class needs to be same name as the document name. extend LinearOpMode because it inherits class LinearOpMode's code
 public class Jerome_Yang extends LinearOpMode {
+
+    /// IMPORTANT!!!
+    /// TIP: Using COMMAND and clicking something allows you to see its declaration. Can also right click and Go To then Declaration and Usage
+    /// TIP: If you click something to the right on the scroll bar it shows every place it is used or changed
+    /// TIP: Above a variable or method shows # usage, click it and you see all the places it shows up.
+    /// TIP: Right Click Something and it shows context actions which can do stuff like correct spelling and add missing code.
+    ///
+    /// IF YOU USE MOTOR WITHOUT ENCODER, UNCOMMENT LINES: 39, 52, 63, 80   COMMENT LINES: 28, 51, 58, 61, 62, 64, 79
+    /// IF YOU USE SERVO WITH CONTINUES SERVO, UNCOMMENT LINES: 42, 55, 83, 109   COMMENT LINES: 41, 54, 67, 82, 105
 
     // Variables
     double motorPosition = 0;
@@ -31,10 +40,6 @@ public class Jerome_Yang extends LinearOpMode {
 
     Servo ServoT;// This is declared as a servo, which moves to a position, it could also be CRServo which is a Continuous Servo. The Servo can be programmed between the 2 modes
     //CRServo ServoT; // This is declared as a Continues Rotation Servo which rotates around at a speed
-
-    /// IMPORTANT!!!
-    /// IF YOU USE MOTOR WITHOUT ENCODER, UNCOMMENT LINES: 30, 47, 58, 75   COMMENT LINES: 29, 46, 57, 59, 74
-    /// IF YOU USE SERVO WITH CONTINUES SERVO, UNCOMMENT LINES: 33, 50, 78, 104   COMMENT LINES: 32, 49, 62, 77, 100
 
     // There is a runOpMode method in LinearOpMode, which is the parent class of this subclass, so Override means that runOpMode in here overrides the original runOpMode
     @Override
@@ -50,7 +55,7 @@ public class Jerome_Yang extends LinearOpMode {
         //ServoT = hardwareMap.get(CRServo.class, "ServoT"); //For Continuous Servo Mode
 
         // Set up motor
-        //MotorT.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER); // Reset the encoder to 0
+        MotorT.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER); // Reset the encoder to 0
         MotorT.setPower(1); // Power is the electricity given. from -1(reverse full power) to 1 (full power)
         MotorT.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE); // if no electricity then use power to stop motor. Good for linear slidwe
         MotorT.setTargetPosition(0); // Target position of robo is 0
