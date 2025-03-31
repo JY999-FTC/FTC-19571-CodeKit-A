@@ -13,13 +13,12 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorEx;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.Servo;
-import com.qualcomm.robotcore.hardware.CRServo;
 
 // @TeleOp means this will show up as teleop
 @TeleOp
 
 // public class needs to be same name as the document name. extend LinearOpMode because it inherits class LinearOpMode's code
-public class Jerome_Yang extends LinearOpMode {
+public class Basic_Sample_Code extends LinearOpMode {
 
     /// IMPORTANT!!!
     /// TIP: Using COMMAND and clicking something allows you to see its declaration. Can also right click and Go To then Declaration and Usage
