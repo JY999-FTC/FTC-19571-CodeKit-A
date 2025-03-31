@@ -18,7 +18,7 @@ import com.qualcomm.robotcore.hardware.Servo;
 @TeleOp
 
 // public class needs to be same name as the document name. extend LinearOpMode because it inherits class LinearOpMode's code
-public class Basic_Sample_Code extends LinearOpMode {
+public class Sample_Code_DCMotor_And_Servo extends LinearOpMode {
 
     /// IMPORTANT!!!
     /// TIP: Using COMMAND and clicking something allows you to see its declaration. Can also right click and Go To then Declaration and Usage
